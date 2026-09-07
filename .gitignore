@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+.DS_Store
+.idea/
+.vscode/
+
+# Never commit name corpora sourced from real or semi-real records.
+corpora/
+*_private.tsv
+
+# Internal working notes. Kept locally, never published: the release
+# artifact carries README.md only.
+CHANGELOG.md
+docs/

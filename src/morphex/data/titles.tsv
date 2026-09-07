@@ -1,0 +1,22 @@
+# Honorifics and titles that get typed inside name fields. Stripped during
+# normalization, never treated as name content.
+#
+title	note	status
+ALHAJI	Muslim honorific (male)	unreviewed
+ALHAJA	Muslim honorific (female)	unreviewed
+HAJIYA	Muslim honorific (female)	unreviewed
+MALLAM	Hausa honorific	unreviewed
+MAL	abbreviation of Mallam	unreviewed
+CHIEF	traditional title	unreviewed
+OTUNBA	Yoruba chieftaincy title	unreviewed
+PASTOR	religious	unreviewed
+REV	religious	unreviewed
+IMAM	religious	unreviewed
+PROF	academic	unreviewed
+DR	professional	unreviewed
+ENGR	professional	unreviewed
+BARR	professional (barrister)	unreviewed
+MR	general	unreviewed
+MRS	general	unreviewed
+MISS	general	unreviewed
+MASTER	general	unreviewed

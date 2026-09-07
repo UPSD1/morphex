@@ -1,0 +1,31 @@
+# Arabic-derived names as adapted by different Nigerian traditions.
+#
+# WHY THIS IS SEPARATE FROM hausa_variants.tsv
+#   That file holds transliteration spread within one tradition: MUHAMMAD,
+#   MOHAMMED and MUHAMMED are the same name written differently. This file
+#   holds something harder. The same Arabic root is absorbed into different
+#   Nigerian languages and comes out phonologically reshaped, so the surface
+#   forms diverge far enough that no phonetic encoder will ever connect them:
+#
+#       Hebrew Avraham -> Arabic Ibrahim -> Yoruba Buraimoh
+#
+#   IBRAHIM and BURAIMOH share almost no consonant skeleton. Double Metaphone
+#   gives APRHM and PRM. Jaro-Winkler scores them near zero. Only a table can
+#   link them.
+#
+#   This also means a name is not always owned by one tradition. Arabic-derived
+#   names are shared across Hausa and Yoruba Muslim populations, so a lexicon
+#   row saying "hausa" may be describing where the name is most common rather
+#   than where a given person's usage sits.
+#
+# STATUS
+#   One confirmed chain. This file is deliberately almost empty rather than
+#   filled with plausible guesses: getting an adaptation wrong links two
+#   different people, and I have no basis for asserting these beyond the one
+#   that was given to me. Additions want a speaker, not inference.
+#
+# Each row is one equivalence group, pipe-separated. Any member matches any
+# other member.
+#
+group	root	status	reviewer
+IBRAHIM|BURAIMOH	Arabic Ibrahim, from Hebrew Avraham	reviewed	David Akinboro

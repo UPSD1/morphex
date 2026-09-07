@@ -1,0 +1,51 @@
+# Golden matching corpus. Each row asserts whether two name forms SHOULD
+# resolve to the same person by phonetic matching alone.
+#
+# should_match=yes  -> a real full-form/short-form or spelling pair
+# should_match=no   -> a near-miss that must NOT collide (precision guard)
+#
+# mode=default -> evaluated with the safe default settings
+# mode=bare    -> evaluated with include_bare_elements=True, which is opt-in
+#                 because it collides names sharing an element. Rows in this
+#                 mode document what enabling it buys and what it costs.
+#
+# status=unreviewed rows are asserted from common naming patterns and need
+# native-speaker confirmation. A passing test on an unreviewed row proves
+# only that the code is self-consistent; it is not linguistic validation.
+#
+a	b	tradition	should_match	mode	pattern	status
+Ifeoluwa	Ife	both	yes	default	trailing-drop	unreviewed
+Ifeanyichukwu	Ifeanyi	igbo	yes	default	trailing-drop	unreviewed
+Ngozichukwu	Ngozi	igbo	yes	default	trailing-drop	unreviewed
+Kelechukwu	Kele	igbo	yes	default	trailing-drop	unreviewed
+Somtochukwu	Somto	igbo	yes	default	trailing-drop	unreviewed
+Ugochukwu	Ugo	igbo	yes	default	trailing-drop	unreviewed
+Uchechukwu	Uche	igbo	yes	default	trailing-drop	unreviewed
+Nwachukwu	Nwa	igbo	yes	default	trailing-drop	unreviewed
+Obinna	Obi	igbo	yes	default	trailing-drop	unreviewed
+Chukwuemeka	Emeka	igbo	yes	default	leading-drop	unreviewed
+Chioma	Oma	igbo	yes	default	leading-drop	unreviewed
+Adebayo	Bayo	yoruba	yes	default	leading-drop	unreviewed
+Adewale	Wale	yoruba	yes	default	leading-drop	unreviewed
+Oluwaseun	Seun	yoruba	yes	default	leading-drop	unreviewed
+Olamide	Lamide	yoruba	yes	default	initial-vowel-elision	unreviewed
+Adebayo	Debayo	yoruba	yes	default	initial-vowel-elision	unreviewed
+Temiloluwa	Temi	yoruba	yes	default	trailing-drop-linker	unreviewed
+Oluwadamilare	Damilare	yoruba	yes	default	leading-drop	unreviewed
+Zainab	Zeinab	hausa	yes	default	spelling	unreviewed
+Muhammad	Mohammed	hausa	yes	default	transliteration	unreviewed
+Abubakar	Abubakr	hausa	yes	default	transliteration	unreviewed
+Fatima	Fatimah	hausa	yes	default	transliteration	unreviewed
+Olusegun	Ogundimu	yoruba	no	default	distinct-names	unreviewed
+Adebayo	Adewale	yoruba	no	default	distinct-names	unreviewed
+Chinedu	Chizoba	igbo	no	default	distinct-names	unreviewed
+Ngozi	Nneka	igbo	no	default	distinct-names	unreviewed
+Musa	Isa	hausa	no	default	distinct-names	unreviewed
+Emeka	Obinna	igbo	no	default	distinct-names	unreviewed
+Chidera	Chi	igbo	yes	bare	bare-element	unreviewed
+Chinedu	Chizoba	igbo	no	bare	bare-mode collision now blocked by the lexicon	reviewed
+Adeife	Ade	yoruba	yes	default	compound-head	reviewed
+Adeife	Ife	yoruba	no	default	compound-tail	reviewed
+Ayoola	Ayo	yoruba	yes	default	compound-head	reviewed
+Ayoola	Ola	yoruba	no	default	compound-tail	reviewed
+Ifeoluwa	Oluwa	yoruba	no	default	compound-tail	reviewed

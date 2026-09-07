@@ -1,0 +1,22 @@
+# Hausa names are largely Arabic-derived, so the dominant failure mode is
+# TRANSLITERATION VARIANCE, not affix dropping. Candidate generation does
+# not help here; an explicit variant table does.
+#
+# Each row is one equivalence group, pipe-separated. Any member matches
+# any other member.
+#
+group	status	reviewer
+MUHAMMAD|MOHAMMED|MUHAMMED|MOHAMMAD|MUHAMMADU|MAHAMMAD	unreviewed	
+ABUBAKAR|ABUBAKR|ABUBAKER|ABUBAKARU	unreviewed	
+USMAN|UTHMAN|USMANU|OSMAN	unreviewed	
+IBRAHIM|IBRAHEEM|IBRAHIMA	unreviewed	
+YUSUF|YUSUFU|YUSSUF|YUSIF	unreviewed	
+HASSAN|HASAN|HASSANU	unreviewed	
+HUSSAIN|HUSSEIN|HUSAINI|HUSSAINI	unreviewed	
+FATIMA|FATIMAH|FATIMATU|FATI	unreviewed	
+AISHA|AISHATU|AISHAT|AISHA	unreviewed	
+ZAINAB|ZEINAB|ZAYNAB|ZAINABU	unreviewed	
+SULEIMAN|SULAIMAN|SULEMAN|SULAYMAN	unreviewed	
+ABDULLAHI|ABDULLAH|ABDULAHI	unreviewed	
+AMINU|AMEEN|AMIN	unreviewed	
+SANI|SANUSI	unreviewed	

@@ -1,0 +1,40 @@
+# Nigerian name elements that may be dropped in informal usage.
+#
+# position: leading  = element appears at the START, short form drops it
+#                      (Yoruba pattern: Adebayo -> Bayo)
+#           trailing = element appears at the END, short form drops it
+#                      (Igbo pattern: Ifeanyichukwu -> Ifeanyi)
+#           both     = attested in both positions
+#
+# status:   unreviewed = assembled from common naming patterns, NOT yet
+#                        validated by a native speaker. Do not trust.
+#           reviewed   = confirmed by the named reviewer.
+#
+# Adding a row widens recall and costs little precision, because the full
+# form is always retained as a candidate. Removing a wrong row is cheap.
+# Review is still required before this is relied on for anything consequential.
+#
+element	tradition	position	gloss	example	status	reviewer
+OLUWA	yoruba	both	God	Oluwaseun / Temiloluwa	unreviewed	
+OLU	yoruba	leading	God (short form), chief	Olusegun	unreviewed	
+ADE	yoruba	leading	crown	Adebayo	unreviewed	
+OLA	yoruba	both	wealth, honour	Olamide / Bolanle	unreviewed	
+OMO	yoruba	leading	child	Omolola	unreviewed	
+OGUN	yoruba	leading	Ogun (deity), war	Ogundimu	unreviewed	
+AYO	yoruba	both	joy	Ayodele	unreviewed	
+TEMI	yoruba	leading	mine	Temiloluwa	unreviewed	
+AKIN	yoruba	leading	valour	Akintunde	unreviewed	
+BABA	yoruba	leading	father	Babatunde	unreviewed	
+IYA	yoruba	leading	mother	Iyabo	unreviewed	
+ORI	yoruba	leading	head, destiny	Oriade	unreviewed	
+CHUKWU	igbo	both	God	Chukwuemeka / Ifeanyichukwu	unreviewed	
+CHI	igbo	both	personal god	Chidera / Kelechi	unreviewed	
+NWA	igbo	leading	child	Nwachukwu	unreviewed	
+NNA	igbo	both	father	Nnamdi / Obinna	unreviewed	
+NNE	igbo	both	mother	Nneka	unreviewed	
+OBI	igbo	leading	heart	Obinna	unreviewed	
+UGO	igbo	both	eagle, honour	Ugochukwu	unreviewed	
+AMA	igbo	both	knowledge, compound	Amaka	unreviewed	
+EKE	igbo	both	creator, market day	Ekechukwu	unreviewed	
+UCHE	igbo	both	mind, will	Uchechukwu	unreviewed	
+IFE	both	both	love (Yoruba); thing, light (Igbo)	Ifeoluwa / Ifeanyi	unreviewed	
