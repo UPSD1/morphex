@@ -131,19 +131,70 @@ them without reading Python:
 | `elements.tsv` | Name elements, their tradition, and whether they appear leading, trailing, or both |
 | `lexicon.tsv` | Attested Nigerian name forms, used to tell a real residue from a chimera |
 | `titles.tsv` | Honorifics that get typed into name fields (`Alhaji`, `Chief`, `Dr`) |
-| `hausa_variants.tsv` | Transliteration equivalence groups |
+| `hausa_variants.tsv` | Transliteration equivalence groups, pipe-separated |
+| `arabic_adaptations.tsv` | Arabic roots as reshaped by different traditions, pipe-separated |
 
-**The lexicon is where contributions help most.** It is small, and every name
-added closes part of the coverage gap described above. Adding a name you know
-is real is a two-word change with a measurable effect.
+Every row carries a `status` column. Reviewing a row means confirming the
+entry and its fields, then setting `status` to `reviewed` and adding your name
+to `reviewer`.
+
+| `status` | Meaning |
+|---|---|
+| `unreviewed` | Assembled from common naming patterns, **not** validated by a native speaker |
+| `reviewed` | Confirmed correct by the named reviewer |
+| `rejected` | The reviewer confirmed this is **not** a form in use; excluded from attestation |
+
+Rejected rows are kept rather than deleted, so the reasoning survives and
+nobody re-adds them later. The first is `MIDE`: `Ayomide` shortens to the head
+`Ayo`, not the tail `Mide`.
+
+### `elements.tsv` — what `position` means
+
+| `position` | Meaning |
+|---|---|
+| `leading` | Element is at the START and the short form drops it — the Yoruba pattern, `Adebayo` → `Bayo` |
+| `trailing` | Element is at the END and the short form drops it — the Igbo pattern, `Ifeanyichukwu` → `Ifeanyi` |
+| `both` | Attested in both positions |
+
+### `lexicon.tsv` — attested forms
+
+Candidate generation produces residues and some of them are not names.
+`ADEBAYO` legitimately yields `BAYO`; it also yields `ADEB`, a bad morpheme
+split nobody is called. Structure alone cannot separate them — `YOMIDE` and
+`LOLUWA` are perfectly well-formed and still not names. This list can.
+
+It is **advisory, not a filter**, unless you ask for one. Every candidate is
+still emitted by default, because the list is incomplete and dropping
+unattested forms would silently lose real names. `attested_only=True` trades
+recall for precision.
+
+`provenance` is either `generator-pool` (curated Nigerian name lists) or
+`common-usage` (widely used given names and short forms).
+
+**Nothing here comes from real records**, and nothing ever should — see D6
+under [Design decisions](#design-decisions).
+
+### `arabic_adaptations.tsv` — why it is separate from `hausa_variants.tsv`
+
+`hausa_variants.tsv` holds transliteration spread *within* one tradition:
+`MUHAMMAD`, `MOHAMMED` and `MUHAMMED` are one name spelled differently.
+
+This file holds something harder — the same Arabic root absorbed into
+different Nigerian languages and reshaped, until no phonetic encoder can
+connect the surface forms. `IBRAHIM` and `BURAIMOH` share almost no consonant
+skeleton. Only a table links them.
+
+It ships with **one confirmed chain and no guesses**, deliberately. A wrong
+adaptation links two different people, and unlike an affix rule there is no
+structure to sanity-check it against. Additions want a speaker, not inference.
+
+**The lexicon is where contributions help most.** Every name added closes part
+of the coverage gap. Adding a name you know is real is a two-word change with
+a measurable effect.
 
 Never add names harvested from real records of any kind. The file is public and
 a person's name is personal data even on its own. Names belong here because
 they are part of the language, not because someone is called them.
-
-Every row carries a `status` column. Reviewing a row means confirming the
-element, its position, and its gloss, then setting `status` to `reviewed`
-and adding your name to `reviewer`.
 
 Contributions of this kind are the single most valuable thing anyone can
 add to this project. If you speak Yoruba, Igbo or Hausa and you can confirm

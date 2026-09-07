@@ -1,18 +1,3 @@
-# Golden matching corpus. Each row asserts whether two name forms SHOULD
-# resolve to the same person by phonetic matching alone.
-#
-# should_match=yes  -> a real full-form/short-form or spelling pair
-# should_match=no   -> a near-miss that must NOT collide (precision guard)
-#
-# mode=default -> evaluated with the safe default settings
-# mode=bare    -> evaluated with include_bare_elements=True, which is opt-in
-#                 because it collides names sharing an element. Rows in this
-#                 mode document what enabling it buys and what it costs.
-#
-# status=unreviewed rows are asserted from common naming patterns and need
-# native-speaker confirmation. A passing test on an unreviewed row proves
-# only that the code is self-consistent; it is not linguistic validation.
-#
 a	b	tradition	should_match	mode	pattern	status
 Ifeoluwa	Ife	both	yes	default	trailing-drop	unreviewed
 Ifeanyichukwu	Ifeanyi	igbo	yes	default	trailing-drop	unreviewed

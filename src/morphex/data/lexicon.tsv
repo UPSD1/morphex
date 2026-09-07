@@ -1,36 +1,3 @@
-# Attested Nigerian name forms.
-#
-# WHAT THIS IS FOR
-#   Candidate generation produces residues, and some of them are not names.
-#   ADEBAYO legitimately yields BAYO; it also yields ADEB, which is a bad
-#   morpheme split and a name nobody has. Structure alone cannot tell them
-#   apart (YOMIDE and LOLUWA are perfectly well-formed and still not names).
-#   A lexicon can. A residue present here is an attested form; one that is
-#   absent is either a chimera or a real name we have not recorded yet.
-#
-# HOW IT IS USED
-#   Advisory, not a filter, unless you ask for one. By default every
-#   candidate is still emitted, because this list is incomplete and dropping
-#   unattested forms would silently lose real names. Pass attested_only=True
-#   to trade recall for precision. See is_attested().
-#
-# PROVENANCE
-#   generator-pool  curated Nigerian name lists from the Miola synthetic
-#                   data generator
-#   common-usage    widely used Nigerian given names and short forms
-#
-#   NOTHING HERE COMES FROM REAL RECORDS. This file is public, and a person's
-#   name is personal data even on its own. Names belong here because they are
-#   part of the language, not because someone is called them.
-#
-# status
-#   unreviewed  not yet confirmed by a native speaker
-#   reviewed    confirmed correct by the named reviewer
-#   rejected    the named reviewer confirmed this is NOT a form in use;
-#               excluded from attestation. First example: MIDE, from
-#               Ayomide. The head (Ayo) is used as a short form; the tail
-#               (Mide) is not.
-#
 name	tradition	type	provenance	status	reviewer
 ABDULLAHI	hausa	first	generator-pool	reviewed	David Akinboro
 ABIODUN	yoruba	first	common-usage	reviewed	David Akinboro

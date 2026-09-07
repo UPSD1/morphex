@@ -1,6 +1,3 @@
-# Honorifics and titles that get typed inside name fields. Stripped during
-# normalization, never treated as name content.
-#
 title	note	status
 ALHAJI	Muslim honorific (male)	unreviewed
 ALHAJA	Muslim honorific (female)	unreviewed
